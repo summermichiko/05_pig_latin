@@ -1,29 +1,34 @@
 var translate = function(word) {
 	var pigla = "ay";
-	var vowels = ["a", "e", "i", "o", "u"];
+	var vowels = ["a", "e", "i", "o", "u"]; //use?
 	var firstLetter = word.slice(0,1);
-	var secondLetter = word.slice(0,2);
+	var firstTwoLetters = word.slice(0,2);
+	var firstThreeLetters = word.slice(0,3);
 	var s = "";
 	var ending;
 
 	if (firstLetter == "a" || firstLetter == "e" || firstLetter == "i" || firstLetter == "o" || firstLetter == "u"){
 		s = word + pigla;
-		return s;
+		return s; //1
 	}
 
 	if (firstLetter != "a" || firstLetter != "e" || firstLetter != "i" || firstLetter != "o" || firstLetter != "u"){
-		s = word.substr(1) + firstLetter + pigla;
-		return s;
+		s = word.substring(1) + firstLetter + pigla;
+		console.log(word.substring(1));
+		return s; //2
 	}
 
-	if (firstLetter && secondLetter != "a" || firstLetter && secondLetter != "e" || firstLetter && secondLetter != "i" || firstLetter && secondLetter != "o" || firstLetter && secondLetter != "u"){
-		ending = firstLetter + secondLetter + pigla;
-		s = word.substr(2) + ending;
-		return s;
+	if (firstTwoLetters != "a" || firstTwoLetters != "e" || firstTwoLetters != "i" || firstTwoLetters != "o" || firstTwoLetters != "u") {
+		s = word.substring(2) + firstTwoLetters + pigla;
+		console.log(word.substring(2));
+		return s; //5? should be 3
 	}
 
-	//1, 2, 5 are working!
-
+	if (firstThreeLetters != "a" || firstThreeLetters != "e" || firstThreeLetters != "i" || firstThreeLetters != "o" || firstThreeLetters != "u") {
+		s = word.substring(3) + firstThreeLetters + pigla;
+		console.log(word.substring(3)); //should be 5
+		return s;
+	}
 	
 };
 
