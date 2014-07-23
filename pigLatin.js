@@ -1,9 +1,9 @@
 var translate = function(word) {
 	var pigla = "ay";
 	var vowels = ["a", "e", "i", "o", "u"]; //use?
-	var firstLetter = word.slice(0,1);
-	var firstTwoLetters = word.slice(0,2);
-	var firstThreeLetters = word.slice(0,3);
+	var firstLetter = word.slice(0,1); //remove
+	var firstTwoLetters = word.slice(0,2); //remove
+	var firstThreeLetters = word.slice(0,3); //remove
 	var s = "";
 	var ending;
 
@@ -31,6 +31,15 @@ var translate = function(word) {
 	}
 	
 };
+
+
+var example = 'example'
+example.search('i')
+ 
+var hello = 'hello'
+for(var i = 0; i < hello.length; i++){
+  console.log(hello[i])
+}
 
 
 
